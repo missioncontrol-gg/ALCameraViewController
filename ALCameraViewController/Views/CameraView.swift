@@ -32,6 +32,9 @@ public class CameraView: UIView {
                 device.flashMode = .auto
                 device.unlockForConfiguration()
             } catch _ {}
+        } else {
+            print("Error: No Camera device found")
+            return
         }
 
         let outputSettings = [AVVideoCodecKey: AVVideoCodecJPEG]
